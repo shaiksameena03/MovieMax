@@ -1,0 +1,70 @@
+.topNav {
+  background: black;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-left {
+  .navbar-brand {
+    display: flex;
+    align-items: center;
+  }
+
+  .nav__logo {
+    width: 120px;
+    cursor: pointer;
+  }
+}
+
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  .language-select {
+    padding: 8px 12px;
+    border: none;
+    border-radius: 5px;
+    background: #222;
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+    outline: none;
+  }
+
+  .btn {
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background 0.3s ease-in-out;
+
+    &.btn-danger {
+      background: red;
+      color: white;
+
+      &:hover {
+        background: darkred;
+      }
+    }
+
+    &.btn-warning {
+      background: red;
+      color: white;
+
+      &:hover {
+        background: red;
+      }
+    }
+  }
+}

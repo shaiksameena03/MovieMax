@@ -1,0 +1,243 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Arial", sans-serif;
+  background-color: #000;
+  color: white;
+}
+
+/* Home Banner Section */
+.home-banner {
+  position: relative;
+  height: 90vh;
+  background: url("https://imaginative-tulumba-a176a9.netlify.app/static/media/bg_image.1dbb71681b8d1bd8b56e.png") 
+              center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  padding: 20px;
+
+  .our-story-card {
+    z-index: 2;
+    max-width: 800px;
+
+    .our-story-card-title {
+      font-size: 3rem;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .our-story-card-subtitle {
+      font-size: 1.5rem;
+      margin-bottom: 20px;
+    }
+  }
+
+  /* Dark overlay for readability */
+  .shadow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+  }
+}
+
+/* Adjusting Email Section Position */
+.email-section {
+  text-align: center;
+  padding: 40px;
+  background: rgba(0, 0, 0, 0.85);
+  border-radius: 10px;
+  max-width: 750px;
+  margin: 30px auto 50px auto; /* Space it below the banner */
+  box-shadow: 0 8px 20px rgba(255, 255, 255, 0.2);
+  position: relative;
+  z-index: 2; /* Ensures it appears in the correct layer */
+}
+
+/* Ensuring Banner Doesn’t Overlap */
+.home-banner {
+  position: relative;
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  padding: 20px;
+}
+
+/* Fixing Input Box and Button */
+.input-group {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+
+.input-group .form-control {
+  padding: 14px;
+  font-size: 1.2rem;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  width: 70%;
+}
+
+.input-group-button {
+  padding: 14px 25px;
+  font-size: 1.2rem;
+  background: red;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.input-group-button:hover {
+  background: darkred;
+}
+
+
+/* Trending Now Section */
+.trending-section {
+  padding: 50px;
+  background: linear-gradient(to bottom, #111, #222);
+  text-align: center;
+
+  .trending-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+
+  .trending-list {
+    display: flex;
+    overflow-x: auto;
+    gap: 25px; /* Increased space between images */
+    padding-bottom: 10px;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  .trending-list::-webkit-scrollbar {
+    display: none;
+  }
+
+  .trending-item {
+    position: relative;
+    min-width: 200px;
+    max-width: 200px;
+    margin: 0 10px; /* Adds spacing on both sides of each item */
+    transition: transform 0.3s ease-in-out;
+    cursor: pointer;
+  
+    &:hover {
+      transform: scale(1.15);
+    }
+
+    .trending-image {
+      width: 200px;  /* Fixed width */
+      height: 300px; /* Fixed height */
+      object-fit: cover;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(255, 255, 255, 0.2);
+    }
+  
+    
+    .trending-rank {
+      position: absolute;
+      top: -10px;
+      left: -10px;
+      background: black;
+      color: white;
+      font-size: 2rem;
+      font-weight: bold;
+      padding: 5px 10px;
+      border-radius: 50%;
+      border: 2px solid white;
+    }
+  }
+}
+
+/* Reasons to Join Section */
+.reasons-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px; /* Space between cards */
+  padding: 40px 20px;
+}
+
+.reason-card {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  width: 250px;
+  border-radius: 12px;
+  text-align: center;
+  color: white;
+  font-size: 1rem;
+  transition: transform 0.3s ease;
+}
+
+.reason-card:hover {
+  transform: scale(1.05);
+}
+
+.reason-card h3 {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+}
+
+.reason-card p {
+  font-size: 0.9rem;
+  color: #ccc;
+}
+
+.reason-card span {
+  font-size: 2rem;
+  display: block;
+  margin-top: 10px;
+}
+.faq-section {
+  background: black;
+  color: white;
+  padding: 40px;
+  text-align: center;
+
+  .faq-heading {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+
+  .faq-item {
+    background: #222;
+    margin: 10px 0;
+    padding: 15px;
+    cursor: pointer;
+
+    .faq-question {
+      display: flex;
+      justify-content: space-between;
+      font-size: 1.2rem;
+    }
+
+    .faq-answer {
+      margin-top: 10px;
+      font-size: 1rem;
+    }
+
+    .faq-icon {
+      font-size: 1.5rem;
+    }
+  }
+}
